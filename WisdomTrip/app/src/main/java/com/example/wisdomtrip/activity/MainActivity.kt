@@ -3,6 +3,7 @@ package com.example.wisdomtrip.activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.example.wisdomtrip.R
 import com.example.wisdomtrip.activity.map.MainMapActivity
 import java.util.*
@@ -12,13 +13,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        startActivity(Intent(this@MainActivity, MainMapActivity::class.java))
         timerIntent = Timer()
-
-        timerIntent?.schedule(object :TimerTask(){
+        timerIntent?.schedule(object : TimerTask() {
             override fun run() {
-                Intent(this@MainActivity, MainMapActivity::class.java)
+                Log.d("TAG", "Timer")
             }
-        },0,5000L)
+        }, 0, 5000L)
     }
 
     override fun onDestroy() {
