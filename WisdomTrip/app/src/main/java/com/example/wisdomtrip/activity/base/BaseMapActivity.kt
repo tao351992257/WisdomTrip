@@ -1,11 +1,11 @@
 package com.example.wisdomtrip.activity.base
 
-import android.app.Activity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.wisdomtrip.R
 import kotlinx.android.synthetic.main.base_map_activity.*
 
-open class BaseMapActivity: Activity() {
+open class BaseMapActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.base_map_activity)
