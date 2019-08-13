@@ -3,14 +3,17 @@ package com.example.wisdomtrip.activity.base
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.wisdomtrip.R
-import kotlinx.android.synthetic.main.base_map_activity.*
+import kotlinx.android.synthetic.main.activity_base_map.*
 
-open class BaseMapActivity: AppCompatActivity() {
+
+abstract class BaseMapActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.base_map_activity)
+        setContentView(R.layout.activity_base_map)
         mMapView.onCreate(savedInstanceState)
     }
+
+    abstract fun initLocation()
 
     override fun onDestroy() {
         super.onDestroy()

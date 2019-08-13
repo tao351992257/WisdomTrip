@@ -58,6 +58,7 @@
         <activity android:name=".activity.map.MainMapActivity"
                   android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize"
                   android:screenOrientation="portrait"/>
+        <service android:name="com.amap.api.location.APSService"></service>
     </application>
 
 </manifest>
